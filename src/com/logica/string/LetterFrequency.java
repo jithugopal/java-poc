@@ -1,27 +1,18 @@
 package com.logica.string;
 
 
+/**
+ * Problem: Expand the encoding - "a3f2d1b3f12" --> "aaaffdbbbffffffffffff"
+ * 
+ * @author gopalj
+ *
+ */
 public class LetterFrequency {
 	
 	private String encodedStr;
 
 	public LetterFrequency(String encodedStr) {
-		// TODO Auto-generated constructor stub
 		this.encodedStr = encodedStr;
-	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		final String testStr = "a3f2d1b3f12";
-		LetterFrequency lf = new LetterFrequency(testStr);
-		String[] arr = {};
-//		System.out.println(f);
-		for (String str : arr) {
-			System.out.println("In");
-		}
-		System.out.println("Out");
 	}
 
 	private String decrypt() {
@@ -57,4 +48,13 @@ public class LetterFrequency {
 		return Integer.parseInt(encodedStr.substring(lastCharIndex, i));
 	}
 
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		final String testStr = "a3f2d1b3f12";
+		LetterFrequency lf = new LetterFrequency(testStr);
+		System.out.println(lf.decrypt());
+	}
 }
